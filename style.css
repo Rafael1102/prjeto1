@@ -1,0 +1,213 @@
+/* Estilo base */
+html, body {
+  background-color: #D3D3D3;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+    color: blue; /* Cor do texto do link */
+    text-decoration: underline; /* Sublinhar o link */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Estilo principal */
+main {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 3.5rem;
+  text-align: center;
+  color: #936e2f;
+}
+
+.description {
+  margin: 4rem 0;
+  line-height: 1.5;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+}
+
+.card {
+  margin: 1rem;
+  padding: 1.5rem;
+  text-align: left;
+  color: inherit;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  max-width: 300px;
+}
+
+.card:hover {
+  color: #0070f3;
+  border-color: #0070f3;
+}
+
+.card h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+/* Estilo da imagem */
+.imagem-topo {
+  width: 125%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.imagem-topo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* A imagem cobre a div sem distorção */
+  object-position: center; /* Centraliza a imagem */
+}
+
+img {
+  margin: auto; /* Centraliza a imagem horizontalmente */
+  display: block;
+  max-width: 100%; /* Define a largura como 100% do contêiner */
+}
+
+.description {
+  margin-bottom: 4px; /* Ajuste o valor conforme necessário */
+  text-align: justify;
+  font-size: 16px;
+}
+
+.container {
+  display: flex; /* Alinha o conteúdo lado a lado (imagem e texto) */
+  align-items: flex-start; /* Alinha a imagem ao topo do texto */
+}
+
+.container img {
+  width: 300px; /* Define a largura da imagem */
+  opacity: 1; /* Deixa a imagem semi-transparente */
+  margin-left: 20%; /* Espaço entre o texto e a imagem */
+  align-self: center; /* Alinha a imagem verticalmente ao centro do texto */
+}
+
+mark {
+  background-color: #936e2f;
+  color: white;
+  border-radius: 4px;
+}
+
+.text-with-image {
+  display: flex;
+  justify-content: space-between; /* Garante o espaçamento entre texto e imagem */
+  align-items: flex-start; /* Alinha o início do texto com a imagem */
+}
+
+.text-with-image img {
+  max-width: 50%; /* Ajusta a imagem para 50% do contêiner */
+  height: auto; /* Mantém a proporção da imagem */
+  margin-left: 20px; /* Espaço entre a imagem e o texto */
+  float: right; /* Alinha a imagem à direita */
+}
+
+.image-left-text {
+  display: flex;
+  justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+  align-items: flex-start; /* Alinha o início do texto com a imagem */
+}
+
+.image-left-text img {
+  max-width: 50%; /* Limita a largura da imagem a 50% */
+  height: auto; /* Mantém a proporção da imagem */
+  margin-right: 20px; /* Espaço entre a imagem e o texto */
+}
+.footer {
+  text-align: center; /* Centraliza o conteúdo */
+  margin-top: 4rem; /* Espaçamento acima do rodapé */
+}
+
+.profile-photo {
+  width: 150px; /* Ajuste o tamanho da imagem conforme necessário */
+  height: 150px; /* Altura para torná-la redonda */
+  border-radius: 50%; /* Torna a imagem redonda */
+  object-fit: cover; /* Mantém a proporção da imagem */
+  margin-bottom: 1rem; /* Espaçamento abaixo da imagem */
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.video-container {
+  flex: 1;
+  margin-right: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  max-width: 800px; /* largura máxima */
+}
+
+video {
+  width: 100%; /* largura do vídeo ocupará 100% do container */
+  height: auto; /* altura automática para manter a proporção */
+  border-radius: 10px 10px 0 0;
+}
+
+.book-image {
+  position: relative;
+  width: 100%; /* ajusta a largura para ser igual ao vídeo */
+  max-width: 800px; /* largura máxima */
+  margin: 20px 0; /* espaço entre vídeo e imagem do livro */
+}
+
+.book-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: blue; /* cor da bola */
+  border-radius: 50%; /* torna a bola redonda */
+  z-index: -1; /* coloca a bola atrás da imagem do livro */
+}
+
+.book-image img {
+  max-width: 100%;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
